@@ -3,6 +3,20 @@
 
 ![screenshot](./.assets/screenshot.png)
 
+## Features
+- **Hyprland** — Dynamic tiling Wayland compositor with animations
+- **Waybar** — Top bar with Unicode workspaces, module integrations
+- **SwayNC** — Notification center with toggles and Do Not Disturb
+- **Rofi (Wayland)** — Custom themed menus for Wi-Fi, Bluetooth, emoji picker
+- **Kitty + Powerlevel10k** — GPU-accelerated terminal with themed prompt
+- **Waypaper + swww** — Toggleable, animated wallpaper control
+- **Zsh** — Fast shell with aliases, autosuggestions & syntax highlighting
+- **NvChad (Neovim)** — Full IDE experience with LSP, formatting, custom theme
+- **Ranger** — Terminal file manager with image/pdf previews
+- **Fastfetch** — Fast system info splash
+- **Clipse** — Minimal clipboard manager
+- **lsd + bat** — Modern replacements for `ls` and `cat`
+
 ## Changes from Cyber-Arch
 - **Zsh** instead of Fish shell (custom `.zshrc` with aliases & prompt)
 - Custom **Hyprland** config (keybinds, animations, rules)
@@ -72,9 +86,18 @@ Then log into Hyprland. Make sure you have **Nord font** installed or you may ru
 - `wifi.sh` — Rofi wireless menu
 - `bluetooth.sh` — Rofi Bluetooth controller
 
+## Philosophy
+Built with a hacker/creator mindset:
+- Sleek, minimal, readable
+- Focused on function and vibe
+- Everything at your fingertips, keyboard-driven
+
 ## Credits
 - Original rice: [V1xEr3bus/Cyber-Arch](https://github.com/V1xEr3bus/Cyber-Arch)
 - Kitty, NvChad, Powerlevel10k, lsd & bat setup inspired by [S4vitar](https://www.youtube.com/c/s4vitar) — "Entorno de un Hacker" (2022)
+- Inspired by [r/unixporn](https://reddit.com/r/unixporn)
 
 ## License
 MIT — Free to use, modify, and share.
+
+Welcom to arch linux ricing . ⚡
