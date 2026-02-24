@@ -1,0 +1,158 @@
+// -*- mode: jsonc -*-
+{
+  // ╔═════════════════════╗
+  // ║     Waybar Base     ║
+  // ╚═════════════════════╝
+  "layer": "top",
+  "position": "top",
+  "spacing": 5,
+  "margin-top": 5,
+  "margin-left": 10,
+  "margin-right": 10,
+
+  // ╔═════════════════════╗
+  // ║     Modules Left     ║
+  // ╚═════════════════════╝
+  "modules-left": [
+    "clock",
+    "hyprland/language",
+    "custom/media",
+    "hyprland/window"
+  ],
+
+  "clock": {
+    "format": "{:%H:%M}  ",
+    "timezone": "America/Tegucigalpa",
+    "format-alt": "{:%A, %B %d-%m-%Y}"
+  },
+
+  "hyprland/language": {
+    "format-en": "EN",
+    "format-he": "HE"
+  },
+
+  "hyprland/window": {
+    "format": "{class}:{title}",
+    "rewrite": {
+      "^brave-browser:.*$":" ",
+      "^zen-browser:.*$":"🪷",
+      "^kitty:(.*)$":"〔\uf120 〕",
+      "^Code:(.*$)":"\ue70c "
+    },
+    "separate-outputs": true
+  },
+
+  // ╔══════════════════════╗
+  // ║    Modules Center     ║
+  // ╚══════════════════════╝
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+
+  "hyprland/workspaces": {
+    "font": "noto-sans-cjk",
+    "disable-scroll": false,
+    "all-outputs": true,
+    "warp-on-scroll": false,
+    "format": "{icon}",
+    "format-icons": {
+      "1": "一",
+      "2": "二",
+      "3": "三",
+      "4": "四",
+      "5": "五",
+      "6": "六",
+      "7": "七",
+      "8": "八",
+      "9": "九"
+    },
+    "persistent-workspaces": {
+      "*": 9
+    }
+  },
+
+  // ╔══════════════════════╗
+  // ║    Modules Right      ║
+  // ╚══════════════════════╝
+  "modules-right": [
+    "temperature",
+    "network",
+    "battery",
+    "backlight",
+    "pulseaudio",
+    "custom/notification"
+  ],
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "{temperatureC}°C {icon}",
+    "format-icons": ["", "", ""]
+  },
+
+  "network": {
+    "format-wifi": "{essid} ",
+    "format-ethernet": "{ipaddr}/{cidr} ",
+    "tooltip-format": "{ifname} via {gwaddr} ",
+    "format-linked": "{ifname} (No IP) ",
+    "format-disconnected": "Disconnected ⚠",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 15,
+      "critical": 5
+    },
+    "format": "{capacity}% {icon}",
+    "format-full": "{capacity}% {icon}",
+    "format-charging": "{capacity}% ",
+    "format-plugged": "{capacity}% ",
+    "format-icons": ["", "", "", "", ""]
+  },
+
+  "backlight": {
+    "format": "{percent}% {icon}",
+    "format-icons": ["", "", "", "", "", "", "", "", ""]
+  },
+
+  "pulseaudio": {
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol"
+  },
+
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "<span foreground='red'><sup></sup></span>",
+      "none": "",
+      "dnd-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-none": "",
+      "inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": ""
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
+  }
+}
+
