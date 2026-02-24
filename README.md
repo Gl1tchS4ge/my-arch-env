@@ -1,4 +1,4 @@
-# My Arch Rice
+# Arch cybers4ge
 > Based on [Cyber-Arch](https://github.com/V1xEr3bus/Cyber-Arch) by V1xEr3bus — "Into the dark... with precision."
 
 ![screenshot](./.assets/screenshot.png)
@@ -31,7 +31,6 @@ paru -S zoxide bat fastfetch cava cmatrix blueman swww \
 Optional:
 - `grim` + `slurp` → Screenshots
 - `pamixer` → Volume management
-- `blueman` → Bluetooth GUI
 
 ## Included Configs
 ```
