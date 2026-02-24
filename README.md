@@ -69,6 +69,6 @@ Then log into Hyprland. Make sure you have **Nord font** installed or you may ru
 
 ## Credits
 - Original rice: [V1xEr3bus/Cyber-Arch](https://github.com/V1xEr3bus/Cyber-Arch)
-
+-  Kitty, NvChad, Powerlevel10k, lsd & bat setup inspired by [S4vitar](https://www.youtube.com/c/s4vitar) — "Entorno de un Hacker" (2022)
 ## License
 MIT — Free to use, modify, and share.
